@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy2Research — คลังความรู้ สุขภาพ ความสุข งานวิจัย อัปเดตทุกวัน</title>
+<meta name="description" content="Happy2Research คลังความรู้ 30 เรื่องด้านสุขภาพ ความสุข และงานวิจัย หมุนเวียนเนื้อหาเด่นใหม่ทุกวัน รวมแนวทางจากเพจ Writer2Health, Writer2Happy และ Writer2Research">
+<meta name="keywords" content="สุขภาพ, ความสุข, งานวิจัย, การเขียน, Happy2Research, Writer2Health, Writer2Happy, Writer2Research, ความรู้รายวัน">
+<meta name="author" content="Happy2Research">
+<link rel="canonical" href="https://happy2research.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Happy2Research">
+<meta property="og:title" content="Happy2Research — คลังความรู้ สุขภาพ ความสุข งานวิจัย">
+<meta property="og:description" content="ความรู้ดี ๆ 30 เรื่อง หมุนเวียนใหม่ทุกวัน ด้านสุขภาพ ความสุข และงานวิจัย">
+<meta property="og:url" content="https://happy2research.com/">
+<meta property="og:locale" content="th_TH">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Happy2Research — คลังความรู้ สุขภาพ ความสุข งานวิจัย">
+<meta name="twitter:description" content="ความรู้ดี ๆ 30 เรื่อง หมุนเวียนใหม่ทุกวัน">
+<meta name="theme-color" content="#0f1117">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1117'/%3E%3Ccircle cx='22' cy='26' r='10' fill='%232dd4a7'/%3E%3Ccircle cx='42' cy='26' r='10' fill='%23fbbf4c'/%3E%3Crect x='24' y='38' width='16' height='18' rx='3' fill='%237c9cff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Prompt:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1117; --card:#1a1d27; --card2:#222633;
+    --text:#e9ecf2; --muted:#9aa3b5; --line:#2b3040;
+    --health:#2dd4a7; --happy:#fbbf4c; --research:#7c9cff;
+    --health-bg:rgba(45,212,167,.12); --happy-bg:rgba(251,191,76,.12); --research-bg:rgba(124,156,255,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  h1,h2,h3,.brand{font-family:'Prompt',sans-serif}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+  /* HERO */
+  header.hero{position:relative;overflow:hidden;padding:64px 0 40px;
+    background:radial-gradient(900px 400px at 15% -10%,rgba(45,212,167,.18),transparent),
+               radial-gradient(900px 500px at 100% 0%,rgba(124,156,255,.18),transparent),
+               linear-gradient(180deg,#141722,#0f1117)}
+  .badge-live{display:inline-flex;align-items:center;gap:8px;background:var(--card2);border:1px solid var(--line);
+    padding:6px 14px;border-radius:30px;font-size:.85rem;color:var(--muted)}
+  .dot{width:9px;height:9px;border-radius:50%;background:#2dd4a7;box-shadow:0 0 0 0 rgba(45,212,167,.6);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(45,212,167,.6)}70%{box-shadow:0 0 0 10px rgba(45,212,167,0)}100%{box-shadow:0 0 0 0 rgba(45,212,167,0)}}
+  .hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.2;margin:18px 0 12px;font-weight:700}
+  .hero h1 span{background:linear-gradient(90deg,var(--health),var(--research));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero p.sub{color:var(--muted);font-size:1.1rem;max-width:620px}
+  .stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:26px}
+  .stat .n{font-family:'Prompt';font-size:1.9rem;font-weight:700}
+  .stat .l{color:var(--muted);font-size:.9rem}
+  .hero-art{margin-top:30px;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 20px 50px -20px rgba(0,0,0,.6)}
+  .hero-art svg{display:block;width:100%;height:auto}
+
+  /* DAILY FEATURE */
+  .daily{margin:36px 0 8px;background:linear-gradient(120deg,var(--card2),var(--card));border:1px solid var(--line);
+    border-radius:20px;padding:28px;position:relative;overflow:hidden}
+  .daily:before{content:"";position:absolute;inset:0;background:radial-gradient(400px 200px at 90% 10%,rgba(251,191,76,.12),transparent)}
+  .daily .kicker{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--happy);font-weight:600}
+  .daily h2{font-size:1.5rem;margin:8px 0 10px;position:relative}
+  .daily p{color:var(--text);position:relative;max-width:760px}
+  .daily .tip{margin-top:14px;background:rgba(255,255,255,.04);border-left:3px solid var(--happy);padding:10px 16px;border-radius:8px;color:var(--muted);position:relative}
+  .daily .dart{float:right;width:300px;max-width:42%;margin:0 0 14px 22px;border-radius:14px;overflow:hidden;border:1px solid var(--line);position:relative}
+  .daily .dart svg{display:block;width:100%;height:auto}
+  @media(max-width:640px){.daily .dart{float:none;width:100%;max-width:100%;margin:0 0 14px 0}}
+
+  /* TABS */
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:34px 0 22px}
+  .tab{cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--muted);
+    padding:9px 18px;border-radius:30px;font-family:'Prompt';font-size:.95rem;font-weight:500;transition:.2s}
+  .tab:hover{color:var(--text);border-color:#3a4258}
+  .tab.active{color:#0f1117;background:var(--text);border-color:var(--text);font-weight:600}
+  .tab.health.active{background:var(--health);border-color:var(--health)}
+  .tab.happy.active{background:var(--happy);border-color:var(--happy)}
+  .tab.research.active{background:var(--research);border-color:var(--research)}
+
+  /* GRID */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px;padding-bottom:50px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;
+    display:flex;flex-direction:column;gap:10px;transition:transform .18s,border-color .18s;animation:rise .4s ease both}
+  .card:hover{transform:translateY(-4px)}
+  .card .art{margin:-22px -22px 6px;border-radius:15px 15px 0 0;overflow:hidden;display:block}
+  .card .art > svg{display:block;width:100%;height:auto}
+  .photowrap{position:relative;width:100%;aspect-ratio:600/320;background:#11141c;overflow:hidden}
+  .photowrap .photo{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .card:hover .photowrap .photo{transform:scale(1.06)}
+  .photowrap .svgfb{position:absolute;inset:0;opacity:0;transition:opacity .2s}
+  .photowrap .svgfb svg{width:100%;height:100%;display:block}
+  .photowrap.noimg .photo{display:none}
+  .photowrap.noimg .svgfb{opacity:1}
+  .photowrap .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 11px;
+    font-family:'Prompt',sans-serif;font-weight:600;font-size:.98rem;color:#fff;
+    display:flex;align-items:center;gap:8px;line-height:1.25;
+    background:linear-gradient(0deg,rgba(0,0,0,.82),rgba(0,0,0,.35) 55%,transparent)}
+  .photowrap .dotc{width:9px;height:9px;border-radius:50%;background:var(--ac);box-shadow:0 0 8px var(--ac);flex:none}
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+  .card .top{display:flex;align-items:center;justify-content:space-between}
+  .chip{font-size:.74rem;font-weight:600;padding:4px 11px;border-radius:20px;font-family:'Prompt'}
+  .chip.health{color:var(--health);background:var(--health-bg)}
+  .chip.happy{color:var(--happy);background:var(--happy-bg)}
+  .chip.research{color:var(--research);background:var(--research-bg)}
+  .card:hover.health{border-color:var(--health)} .card:hover.happy{border-color:var(--happy)} .card:hover.research{border-color:var(--research)}
+  .num{font-family:'Prompt';font-size:.8rem;color:#566076;display:flex;align-items:center;gap:6px}
+  .newbadge{font-family:'Prompt';font-size:.66rem;font-weight:700;color:#0f1117;background:linear-gradient(90deg,#ff7a7a,#ffb24d);padding:2px 7px;border-radius:20px;letter-spacing:.04em}
+  .card h3{font-size:1.12rem;line-height:1.35}
+  .card .body{color:var(--muted);font-size:.96rem;flex:1}
+  .card .tip{font-size:.88rem;color:var(--text);background:rgba(255,255,255,.03);padding:9px 12px;border-radius:9px;border-left:2px solid var(--line)}
+  .card .src{display:flex;align-items:center;gap:6px;font-size:.82rem;color:#6f7a90;text-decoration:none;margin-top:2px}
+  .card .src:hover{color:var(--text)}
+
+  /* PAGE LINKS */
+  .pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:10px 0 46px}
+  .pcard{display:block;text-decoration:none;color:var(--text);background:var(--card);border:1px solid var(--line);
+    border-radius:16px;padding:22px;transition:.2s}
+  .pcard:hover{transform:translateY(-3px)}
+  .pcard .pi{font-family:'Prompt';font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:9px}
+  .pcard p{color:var(--muted);font-size:.9rem;margin-top:8px}
+  .pcard.h:hover{border-color:var(--health)} .pcard.hp:hover{border-color:var(--happy)} .pcard.r:hover{border-color:var(--research)}
+  .fbtag{margin-left:auto;font-size:.78rem;color:#6f7a90}
+
+  section.lead{margin:46px 0 4px}
+  section.lead h2{font-size:1.6rem} section.lead p{color:var(--muted);margin-top:6px}
+
+  footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.88rem;text-align:center}
+  .hidden{display:none!important}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand" style="font-size:1.15rem;font-weight:700;letter-spacing:.3px;margin-bottom:14px;color:#e9ecf2">
+      <span style="color:var(--health)">Happy</span><span style="color:var(--research)">2</span><span style="color:var(--happy)">Research</span>
+      <span style="color:var(--muted);font-weight:500;font-size:.8rem">.com</span>
+    </div>
+    <span class="badge-live"><span class="dot"></span> อัปเดตทุกวัน · <span id="today"></span></span>
+    <h1>คลังความรู้ <span>สุขภาพ · ความสุข · งานวิจัย</span></h1>
+    <p class="sub">รวม 30 เรื่องน่ารู้จากเพจ Writer2Health, Writer2Happy และ Writer2Research — หมุนเวียนเนื้อหาเด่นใหม่ทุกวัน เพื่อให้คุณได้ความรู้ดี ๆ แบบไม่ซ้ำเดิม</p>
+    <div class="stats">
+      <div class="stat"><div class="n" id="nHealth" style="color:var(--health)">0</div><div class="l">เรื่องสุขภาพ</div></div>
+      <div class="stat"><div class="n" id="nHappy" style="color:var(--happy)">0</div><div class="l">เรื่องความสุข</div></div>
+      <div class="stat"><div class="n" id="nResearch" style="color:var(--research)">0</div><div class="l">เรื่องงานวิจัย</div></div>
+      <div class="stat"><div class="n" id="nTotal">0</div><div class="l">รวมทั้งหมด</div></div>
+    </div>
+
+    <div class="hero-art">
+      <svg viewBox="0 0 1100 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ภาพประกอบคลังความรู้ สุขภาพ ความสุข งานวิจัย">
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#171b27"/><stop offset="1" stop-color="#0f1117"/>
+          </linearGradient>
+          <linearGradient id="gH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4a7"/><stop offset="1" stop-color="#119e7a"/></linearGradient>
+          <linearGradient id="gP" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#fbbf4c"/></linearGradient>
+          <linearGradient id="gR" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9db4ff"/><stop offset="1" stop-color="#7c9cff"/></linearGradient>
+          <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ffe6a8"/><stop offset="1" stop-color="#fbbf4c"/></radialGradient>
+        </defs>
+        <rect width="1100" height="300" fill="url(#hg)"/>
+        <circle cx="120" cy="40" r="180" fill="#2dd4a7" opacity="0.06"/>
+        <circle cx="980" cy="280" r="200" fill="#7c9cff" opacity="0.06"/>
+
+        <!-- หัวข้อใหญ่ในภาพ -->
+        <text x="60" y="92" font-family="Prompt, sans-serif" font-size="46" font-weight="700" fill="#e9ecf2">ความรู้ดี ๆ ทุกวัน</text>
+        <text x="62" y="132" font-family="Sarabun, sans-serif" font-size="21" fill="#9aa3b5">30 เรื่องน่ารู้ · สุขภาพ · ความสุข · งานวิจัย</text>
+        <rect x="62" y="150" width="74" height="5" rx="2.5" fill="url(#gH)"/>
+        <rect x="142" y="150" width="74" height="5" rx="2.5" fill="url(#gP)"/>
+        <rect x="222" y="150" width="74" height="5" rx="2.5" fill="url(#gR)"/>
+
+        <!-- การ์ดธีมสุขภาพ -->
+        <g transform="translate(70,185)">
+          <rect width="290" height="86" rx="16" fill="#1a1d27" stroke="#2dd4a7" stroke-opacity="0.4"/>
+          <circle cx="46" cy="43" r="26" fill="url(#gH)"/>
+          <path d="M46 56 C 33 47, 33 35, 41 35 C 45 35, 46 39, 46 39 C 46 39, 47 35, 51 35 C 59 35, 59 47, 46 56 Z" fill="#0f1117"/>
+          <text x="86" y="40" font-family="Prompt, sans-serif" font-size="19" font-weight="600" fill="#2dd4a7">สุขภาพดี</text>
+          <text x="86" y="63" font-family="Sarabun, sans-serif" font-size="14" fill="#9aa3b5">เริ่มที่ตัวเรา</text>
+        </g>
+        <!-- การ์ดธีมความสุข -->
+        <g transform="translate(405,185)">
+          <rect width="290" height="86" rx="16" fill="#1a1d27" stroke="#fbbf4c" stroke-opacity="0.4"/>
+          <circle cx="46" cy="43" r="26" fill="url(#sun)"/>
+          <circle cx="40" cy="40" r="2.6" fill="#0f1117"/><circle cx="52" cy="40" r="2.6" fill="#0f1117"/>
+          <path d="M38 47 Q46 54 54 47" stroke="#0f1117" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+          <text x="86" y="40" font-family="Prompt, sans-serif" font-size="19" font-weight="600" fill="#fbbf4c">ใจเป็นสุข</text>
+          <text x="86" y="63" font-family="Sarabun, sans-serif" font-size="14" fill="#9aa3b5">ทุก ๆ วัน</text>
+        </g>
+        <!-- การ์ดธีมงานวิจัย -->
+        <g transform="translate(740,185)">
+          <rect width="290" height="86" rx="16" fill="#1a1d27" stroke="#7c9cff" stroke-opacity="0.4"/>
+          <g transform="translate(28,24)">
+            <rect x="0" y="2" width="36" height="38" rx="4" fill="url(#gR)"/>
+            <line x1="18" y1="6" x2="18" y2="38" stroke="#0f1117" stroke-width="2"/>
+            <line x1="6" y1="14" x2="14" y2="14" stroke="#0f1117" stroke-width="2"/>
+            <line x1="22" y1="14" x2="30" y2="14" stroke="#0f1117" stroke-width="2"/>
+          </g>
+          <text x="86" y="40" font-family="Prompt, sans-serif" font-size="19" font-weight="600" fill="#7c9cff">งานวิจัย</text>
+          <text x="86" y="63" font-family="Sarabun, sans-serif" font-size="14" fill="#9aa3b5">&amp; การเขียน</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- DAILY FEATURE -->
+  <div class="daily" id="daily"></div>
+
+  <!-- TABS -->
+  <div class="tabs" id="tabs">
+    <div class="tab active" data-cat="all">ทั้งหมด</div>
+    <div class="tab health" data-cat="health">🌿 สุขภาพ</div>
+    <div class="tab happy" data-cat="happy">😊 ความสุข</div>
+    <div class="tab research" data-cat="research">🔬 งานวิจัย</div>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid" id="grid"></div>
+
+  <!-- PAGE LINKS -->
+  <section class="lead">
+    <h2>ติดตามเพจต้นทาง</h2>
+    <p>เนื้อหาทั้งหมดเรียบเรียงตามแนวทางของสามเพจด้านล่าง กดติดตามเพื่ออ่านโพสต์ฉบับเต็ม</p>
+  </section>
+  <div class="pages">
+    <a class="pcard h" href="https://www.facebook.com/Writer2Health/" target="_blank" rel="noopener">
+      <div class="pi">🌿 Writer2Health <span class="fbtag">Facebook ↗</span></div>
+      <p>ความรู้สุขภาพกาย โภชนาการ และการดูแลร่างกายในชีวิตประจำวัน</p>
+    </a>
+    <a class="pcard hp" href="https://www.facebook.com/Writer2Happy/" target="_blank" rel="noopener">
+      <div class="pi">😊 Writer2Happy <span class="fbtag">Facebook ↗</span></div>
+      <p>ความสุข สุขภาพใจ และการพัฒนาตัวเองให้ใช้ชีวิตอย่างมีความหมาย</p>
+    </a>
+    <a class="pcard r" href="https://www.facebook.com/writer2research/" target="_blank" rel="noopener">
+      <div class="pi">🔬 Writer2Research <span class="fbtag">Facebook ↗</span></div>
+      <p>เทคนิคงานวิจัย การเขียนเชิงวิชาการ และการอ่านงานวิจัยอย่างมีวิจารณญาณ</p>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <strong style="font-family:'Prompt',sans-serif;color:#e9ecf2">Happy2Research</strong> · happy2research.com · คลังความรู้รวม 30 เรื่อง · เนื้อหาเด่นหมุนเวียนใหม่ทุกวันแบบอัตโนมัติ<br>
+    เรียบเรียงตามแนวทางเพจ Writer2Health · Writer2Happy · Writer2Research<br>
+    <span style="opacity:.7">© 2026 Happy2Research. สงวนลิขสิทธิ์เนื้อหา</span>
+  </div>
+</footer>
+
+<script>
+/* ---------- ข้อมูลความรู้ 30 เรื่อง ---------- */
+const PAGES = {
+  health:{name:"Writer2Health", url:"https://www.facebook.com/Writer2Health/"},
+  happy:{name:"Writer2Happy", url:"https://www.facebook.com/Writer2Happy/"},
+  research:{name:"Writer2Research", url:"https://www.facebook.com/writer2research/"}
+};
+const LABEL = {health:"สุขภาพ", happy:"ความสุข", research:"งานวิจัย"};
+
+/* ---------- ระบบภาพวาด SVG เฉพาะแต่ละหัวข้อ 30 แบบไม่ซ้ำกัน (ออริจินอล ไม่ติดลิขสิทธิ์ มีข้อความในภาพ) ---------- */
+const THEME = {
+  health:{bg:"#11241f", ac:"#2dd4a7"},
+  happy:{bg:"#2c2412", ac:"#fbbf4c"},
+  research:{bg:"#172240", ac:"#7c9cff"}
+};
+// จานสีทิวทัศน์ต่อหมวด (โทนกลางวัน/แสงทอง ดูเหมือนวิวจริง)
+const SCENE = {
+  health:{skyTop:"#8fcfe6", skyBot:"#ffe7b0", sun:"#ffd277", ridges:["#86c79b","#4ea878","#2c7d56"], water:"#bfe6ea"},
+  happy:{skyTop:"#7fa6d6", skyBot:"#ffcf9c", sun:"#ffb24d", ridges:["#f0a877","#d4794f","#9c5638"], water:"#f6c79c"},
+  research:{skyTop:"#2f4d92", skyBot:"#b6c8ec", sun:"#eaf0ff", ridges:["#6e83b3","#46588a","#2b3a64"], water:"#9fb4e0"}
+};
+let _sid = 0;
+// สร้างภาพวิว SVG เสมือนจริง (ฝังในไฟล์ เปิดออฟไลน์ได้) แตกต่างกันตาม idx — ใช้เป็น fallback ของภาพถ่าย
+function sceneArt(cat,idx,label){
+  const P=SCENE[cat];
+  let s=((idx+3)*2654435761)>>>0;
+  const rnd=()=>{ s=(s*1664525+1013904223)>>>0; return s/4294967296; };
+  const id="sk"+(_sid++);
+  const sunX=50+Math.floor(rnd()*300);
+  const sunY=36+Math.floor(rnd()*44);
+  const hasWater=rnd()<0.5;
+  const horizon=hasWater?150:172;
+  function ridge(yb,rough){
+    const pts=[]; for(let x=-20;x<=420;x+=70) pts.push([x, yb+(rnd()*2-1)*rough]);
+    let d="M-20 214 L"+pts[0][0]+" "+pts[0][1].toFixed(0);
+    for(let i=0;i<pts.length-1;i++){const a=pts[i],b=pts[i+1];const mx=((a[0]+b[0])/2).toFixed(0);const my=((a[1]+b[1])/2).toFixed(0);d+=" Q"+a[0].toFixed(0)+" "+a[1].toFixed(0)+" "+mx+" "+my;}
+    d+=" L420 214 Z"; return d;
+  }
+  const r1=ridge(horizon-32,15), r2=ridge(horizon-14,20), r3=ridge(horizon+4,12);
+  let clouds=""; for(let i=0;i<3;i++){const cx=Math.floor(rnd()*380),cy=18+Math.floor(rnd()*36),w=22+Math.floor(rnd()*30);clouds+=`<ellipse cx="${cx}" cy="${cy}" rx="${w}" ry="${(w*0.38).toFixed(0)}" fill="#ffffff" opacity="0.22"/>`;}
+  let birds=""; const nb=2+Math.floor(rnd()*3); for(let i=0;i<nb;i++){const bx=110+Math.floor(rnd()*220),by=38+Math.floor(rnd()*42);birds+=`<path d="M${bx} ${by} q5 -4 10 0 q5 -4 10 0" stroke="#2c3550" stroke-width="1.5" fill="none" opacity="0.45"/>`;}
+  const water=hasWater?`<rect x="0" y="${horizon}" width="400" height="${214-horizon}" fill="${P.water}"/><rect x="${sunX-7}" y="${horizon}" width="14" height="${214-horizon}" fill="${P.sun}" opacity="0.5"/><rect x="0" y="${horizon}" width="400" height="2" fill="#ffffff" opacity="0.3"/>`:"";
+  return `<svg viewBox="0 0 400 214" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${label}">
+    <defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.skyTop}"/><stop offset="1" stop-color="${P.skyBot}"/></linearGradient></defs>
+    <rect width="400" height="214" fill="url(#${id})"/>
+    <circle cx="${sunX}" cy="${sunY}" r="44" fill="${P.sun}" opacity="0.30"/>
+    <circle cx="${sunX}" cy="${sunY}" r="24" fill="${P.sun}"/>
+    ${clouds}${birds}
+    <path d="${r1}" fill="${P.ridges[0]}" opacity="0.85"/>
+    <path d="${r2}" fill="${P.ridges[1]}" opacity="0.93"/>
+    <path d="${r3}" fill="${P.ridges[2]}"/>
+    ${water}
+    <rect width="400" height="214" fill="#000000" opacity="0.05"/>
+  </svg>`;
+}
+// ภาพสัญลักษณ์ประจำหมวด (สไตล์เดียวกับแถบ Hero) — ใช้กับทุกการ์ดในหมวดเดียวกัน
+const ICONMETA = {
+  health:{h:"สุขภาพดี", s:"เริ่มที่ตัวเรา"},
+  happy:{h:"ใจเป็นสุข", s:"ทุก ๆ วัน"},
+  research:{h:"งานวิจัย", s:"& การเขียน"}
+};
+function iconArt(cat){
+  const t=THEME[cat]; const m=ICONMETA[cat];
+  let sym="";
+  if(cat==="health"){
+    sym=`<circle cx="70" cy="107" r="37" fill="${t.ac}"/><path d="M70 125 C50 109,52 90,62 90 C68 90,70 97,70 97 C70 97,72 90,78 90 C88 90,90 109,70 125 Z" fill="#0f1117"/>`;
+  }else if(cat==="happy"){
+    sym=`<circle cx="70" cy="107" r="37" fill="${t.ac}"/><circle cx="60" cy="101" r="3.6" fill="#0f1117"/><circle cx="80" cy="101" r="3.6" fill="#0f1117"/><path d="M57 112 Q70 124 83 112" stroke="#0f1117" stroke-width="3.6" fill="none" stroke-linecap="round"/>`;
+  }else{
+    sym=`<rect x="44" y="78" width="52" height="60" rx="7" fill="${t.ac}"/><line x1="70" y1="84" x2="70" y2="132" stroke="#0f1117" stroke-width="2.6"/><line x1="52" y1="96" x2="66" y2="93" stroke="#0f1117" stroke-width="2.4"/><line x1="74" y1="93" x2="88" y2="96" stroke="#0f1117" stroke-width="2.4"/><line x1="52" y1="108" x2="66" y2="105" stroke="#0f1117" stroke-width="2.4"/><line x1="74" y1="105" x2="88" y2="108" stroke="#0f1117" stroke-width="2.4"/>`;
+  }
+  return `<svg viewBox="0 0 400 214" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${m.h}">
+    <rect width="400" height="214" fill="#1a1d27"/>
+    <circle cx="372" cy="12" r="98" fill="${t.ac}" opacity="0.07"/>
+    <path d="M400 0 H296 C362 44,400 118,400 152 Z" fill="#ffffff" opacity="0.03"/>
+    ${sym}
+    <text x="126" y="100" font-family="Prompt, sans-serif" font-size="30" font-weight="700" fill="${t.ac}">${m.h}</text>
+    <text x="128" y="134" font-family="Sarabun, sans-serif" font-size="18" fill="#9aa3b5">${m.s}</text>
+  </svg>`;
+}
+function art(cat,idx){ return iconArt(cat); }
+// ลวดลายเฉพาะ 30 หัวข้อ (เรียงตรงกับ DATA: สุขภาพ 1-10, ความสุข 11-20, งานวิจัย 21-30)
+const CARDS = [
+  // --- HEALTH ---
+  {label:"ดื่มน้ำให้พอ", motif:`<path d="M168 30 C176 44,182 52,168 52 C154 52,160 44,168 30 Z" fill="currentColor"/><path d="M150 60 H214 L206 110 H158 Z" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M156 84 H208 L203 108 H161 Z" fill="currentColor" opacity="0.85"/>`},
+  {label:"นอนหลับอย่างมีคุณภาพ", motif:`<path d="M214 40 a30 30 0 1 0 0 60 a23 23 0 0 1 0 -60 Z" fill="currentColor"/><text x="244" y="50" font-family="Prompt" font-size="22" font-weight="700" fill="currentColor">Z</text><text x="262" y="36" font-family="Prompt" font-size="15" font-weight="700" fill="currentColor">z</text><circle cx="150" cy="46" r="2.4" fill="#fff"/><circle cx="170" cy="92" r="2" fill="#fff"/>`},
+  {label:"ขยับร่างกายทุกวัน", motif:`<circle cx="196" cy="40" r="9" fill="currentColor"/><path d="M196 50 L196 78 M196 60 L180 70 M196 60 L214 56 M196 78 L184 102 M196 78 L210 100" stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"/>`},
+  {label:"กินผักผลไม้ครบสี", motif:`<path d="M150 96 a40 22 0 0 0 100 0 Z" fill="currentColor" opacity="0.25"/><circle cx="178" cy="74" r="17" fill="currentColor"/><path d="M178 57 q5 -9 12 -7" stroke="currentColor" stroke-width="3" fill="none"/><circle cx="210" cy="80" r="13" fill="currentColor" opacity="0.7"/><circle cx="196" cy="62" r="8" fill="currentColor" opacity="0.5"/>`},
+  {label:"ลดน้ำตาลที่ซ่อนอยู่", motif:`<rect x="170" y="56" width="44" height="34" rx="5" fill="currentColor" opacity="0.85"/><line x1="176" y1="66" x2="208" y2="66" stroke="#0f1117" stroke-width="2"/><circle cx="192" cy="73" r="30" fill="none" stroke="currentColor" stroke-width="4.5"/><line x1="172" y1="53" x2="212" y2="93" stroke="currentColor" stroke-width="4.5"/>`},
+  {label:"ยืดเหยียดคลายออฟฟิศซินโดรม", motif:`<circle cx="172" cy="44" r="9" fill="currentColor"/><path d="M172 54 L172 84 L156 104 M172 84 L188 104 M172 64 L150 56 M172 64 L196 40" stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"/>`},
+  {label:"หายใจลึกผ่อนคลาย", motif:`<path d="M196 48 V70 M196 70 C196 86,182 84,182 98 C182 108,170 108,170 96 M196 70 C196 86,210 84,210 98 C210 108,222 108,222 96" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M150 60 q14 -10 0 -20 M250 60 q-14 -10 0 -20" stroke="currentColor" stroke-width="2.5" fill="none" opacity="0.6"/>`},
+  {label:"ตรวจสุขภาพประจำปี", motif:`<path d="M168 50 v18 a16 16 0 0 0 32 0 v-18" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="168" cy="48" r="5" fill="currentColor"/><circle cx="200" cy="48" r="5" fill="currentColor"/><line x1="184" y1="84" x2="184" y2="96" stroke="currentColor" stroke-width="4"/><circle cx="184" cy="104" r="9" fill="none" stroke="currentColor" stroke-width="4"/><path d="M214 92 h10 l4 -8 5 16 4 -8 h10" fill="none" stroke="currentColor" stroke-width="3"/>`},
+  {label:"พักสายตา 20-20-20", motif:`<path d="M158 76 q34 -34 68 0 q-34 34 -68 0 Z" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="192" cy="76" r="11" fill="currentColor"/><circle cx="192" cy="76" r="4" fill="#0f1117"/><text x="232" y="64" font-family="Prompt" font-size="13" font-weight="700" fill="currentColor">20</text>`},
+  {label:"โปรตีนเพียงพอ", motif:`<ellipse cx="172" cy="80" rx="15" ry="19" fill="currentColor"/><circle cx="210" cy="74" r="6" fill="currentColor" opacity="0.6"/><rect x="226" y="78" width="26" height="8" rx="4" fill="currentColor"/><rect x="222" y="73" width="6" height="18" rx="3" fill="currentColor"/><rect x="250" y="73" width="6" height="18" rx="3" fill="currentColor"/>`},
+  // --- HAPPY ---
+  {label:"ขอบคุณ 3 อย่างก่อนนอน", motif:`<rect x="160" y="48" width="64" height="56" rx="6" fill="none" stroke="currentColor" stroke-width="3.5"/><line x1="192" y1="48" x2="192" y2="104" stroke="currentColor" stroke-width="2.5" opacity="0.5"/><path d="M205 64 c4 -6 12 -2 11 4 c-1 6 -11 11 -11 11 c0 0 -10 -5 -11 -11 c-1 -6 7 -10 11 -4 Z" fill="currentColor"/><line x1="168" y1="64" x2="184" y2="64" stroke="currentColor" stroke-width="2.5"/><line x1="168" y1="76" x2="184" y2="76" stroke="currentColor" stroke-width="2.5"/>`},
+  {label:"ลดเวลาหน้าจอ", motif:`<rect x="172" y="44" width="40" height="64" rx="7" fill="none" stroke="currentColor" stroke-width="3.5"/><line x1="186" y1="52" x2="198" y2="52" stroke="currentColor" stroke-width="3"/><path d="M192 66 v22 M184 80 l8 9 8 -9" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>`},
+  {label:"ให้อภัยตัวเอง", motif:`<path d="M192 102 C150 78,156 50,176 54 C186 56,192 66,192 66 C192 66,198 56,208 54 C228 50,234 78,192 102 Z" fill="currentColor"/><path d="M180 74 l8 8 16 -16" stroke="#0f1117" stroke-width="4" fill="none" stroke-linecap="round"/>`},
+  {label:"โฟกัสสิ่งที่ควบคุมได้", motif:`<circle cx="192" cy="74" r="34" fill="none" stroke="currentColor" stroke-width="3" opacity="0.5"/><circle cx="192" cy="74" r="22" fill="none" stroke="currentColor" stroke-width="3" opacity="0.75"/><circle cx="192" cy="74" r="9" fill="currentColor"/><path d="M214 52 l16 -8 -6 14" fill="currentColor"/>`},
+  {label:"ความสัมพันธ์ที่ดี", motif:`<circle cx="170" cy="60" r="11" fill="currentColor"/><path d="M152 100 a18 18 0 0 1 36 0 Z" fill="currentColor"/><circle cx="214" cy="60" r="11" fill="currentColor" opacity="0.7"/><path d="M196 100 a18 18 0 0 1 36 0 Z" fill="currentColor" opacity="0.7"/><path d="M192 40 c3 -5 10 -2 9 3 c-1 5 -9 9 -9 9 c0 0 -8 -4 -9 -9 c-1 -5 6 -8 9 -3 Z" fill="currentColor"/>`},
+  {label:"ทำสิ่งเล็ก ๆ ให้คนอื่น", motif:`<rect x="166" y="68" width="52" height="38" rx="4" fill="currentColor" opacity="0.85"/><rect x="160" y="56" width="64" height="16" rx="4" fill="currentColor"/><line x1="192" y1="56" x2="192" y2="106" stroke="#0f1117" stroke-width="3"/><path d="M192 56 c-10 -18 -26 -8 -16 0 M192 56 c10 -18 26 -8 16 0" fill="none" stroke="currentColor" stroke-width="3.5"/>`},
+  {label:"อยู่กับปัจจุบัน", motif:`<circle cx="192" cy="62" r="9" fill="currentColor"/><path d="M192 72 c-22 6 -34 22 -34 30 c20 6 48 6 68 0 c0 -8 -12 -24 -34 -30 Z" fill="currentColor" opacity="0.85"/><path d="M158 102 q-12 -6 -16 2 M226 102 q12 -6 16 2" stroke="currentColor" stroke-width="3.5" fill="none"/>`},
+  {label:"ตั้งเป้าหมายที่มีความหมาย", motif:`<line x1="174" y1="44" x2="174" y2="108" stroke="currentColor" stroke-width="4"/><path d="M174 48 L214 58 L174 72 Z" fill="currentColor"/><circle cx="174" cy="44" r="5" fill="currentColor"/>`},
+  {label:"ยอมรับอารมณ์ลบอย่างอ่อนโยน", motif:`<circle cx="216" cy="56" r="16" fill="currentColor" opacity="0.7"/><path d="M150 92 a17 17 0 0 1 4 -33 a23 23 0 0 1 44 6 a15 15 0 0 1 -2 30 Z" fill="currentColor"/><line x1="168" y1="98" x2="164" y2="110" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><line x1="188" y1="98" x2="184" y2="110" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>`},
+  {label:"หาเวลาให้งานอดิเรก", motif:`<path d="M192 50 a30 26 0 1 0 4 52 c-9 0 -6 -10 -2 -14 c4 -4 14 0 18 -8 a26 24 0 0 0 -20 -30 Z" fill="none" stroke="currentColor" stroke-width="3.5"/><circle cx="178" cy="62" r="4.5" fill="currentColor"/><circle cx="196" cy="58" r="4.5" fill="currentColor"/><circle cx="210" cy="70" r="4.5" fill="currentColor"/><circle cx="204" cy="86" r="4.5" fill="currentColor"/>`},
+  // --- RESEARCH ---
+  {label:"ตั้งคำถามวิจัยให้คมชัด", motif:`<path d="M176 60 a16 16 0 1 1 22 16 c-6 4 -8 8 -8 14" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><circle cx="190" cy="104" r="4.5" fill="currentColor"/>`},
+  {label:"อ่านบทคัดย่อก่อนเสมอ", motif:`<rect x="158" y="46" width="56" height="64" rx="4" fill="currentColor" opacity="0.85"/><line x1="168" y1="60" x2="204" y2="60" stroke="#0f1117" stroke-width="2.5"/><line x1="168" y1="70" x2="204" y2="70" stroke="#0f1117" stroke-width="2.5"/><line x1="168" y1="80" x2="190" y2="80" stroke="#0f1117" stroke-width="2.5"/><circle cx="218" cy="86" r="13" fill="none" stroke="currentColor" stroke-width="4"/><line x1="228" y1="96" x2="240" y2="108" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>`},
+  {label:"จัดการรายการอ้างอิง", motif:`<rect x="160" y="92" width="64" height="14" rx="2" fill="currentColor"/><rect x="166" y="76" width="58" height="14" rx="2" fill="currentColor" opacity="0.8"/><rect x="172" y="60" width="52" height="14" rx="2" fill="currentColor" opacity="0.6"/><rect x="178" y="46" width="46" height="12" rx="2" fill="currentColor" opacity="0.45"/>`},
+  {label:"แยกข้อเท็จจริงจากความเห็น", motif:`<line x1="192" y1="44" x2="192" y2="104" stroke="currentColor" stroke-width="4"/><line x1="160" y1="58" x2="224" y2="58" stroke="currentColor" stroke-width="4"/><path d="M160 58 l-12 26 h24 Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M224 58 l-12 26 h24 Z" fill="none" stroke="currentColor" stroke-width="3"/><rect x="184" y="104" width="16" height="6" rx="2" fill="currentColor"/>`},
+  {label:"เขียนโครงร่างก่อนลงมือ", motif:`<circle cx="166" cy="56" r="4" fill="currentColor"/><line x1="178" y1="56" x2="226" y2="56" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="166" cy="74" r="4" fill="currentColor"/><line x1="178" y1="74" x2="218" y2="74" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="166" cy="92" r="4" fill="currentColor"/><line x1="178" y1="92" x2="226" y2="92" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>`},
+  {label:"หลีกเลี่ยงการคัดลอกผลงาน", motif:`<path d="M192 42 l30 12 v22 c0 20 -16 30 -30 36 c-14 -6 -30 -16 -30 -36 v-22 Z" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M178 74 l9 9 19 -20" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>`},
+  {label:"เลือกแหล่งข้อมูลที่น่าเชื่อถือ", motif:`<ellipse cx="192" cy="52" rx="30" ry="10" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M162 52 v30 c0 6 14 10 30 10 s30 -4 30 -10 v-30" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M162 67 c0 6 14 10 30 10 s30 -4 30 -10" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="232" cy="92" r="11" fill="${THEME.research.bg}" stroke="currentColor" stroke-width="3"/><path d="M227 92 l4 4 7 -8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>`},
+  {label:"เข้าใจสถิติพื้นฐาน", motif:`<line x1="158" y1="104" x2="232" y2="104" stroke="currentColor" stroke-width="3"/><rect x="164" y="84" width="14" height="20" fill="currentColor" opacity="0.6"/><rect x="184" y="68" width="14" height="36" fill="currentColor" opacity="0.8"/><rect x="204" y="56" width="14" height="48" fill="currentColor"/><path d="M160 60 q24 -22 70 -6" fill="none" stroke="currentColor" stroke-width="2.5" opacity="0.7" stroke-dasharray="4 4"/>`},
+  {label:"เขียนบทคัดย่อให้กระชับ", motif:`<rect x="162" y="46" width="60" height="64" rx="4" fill="currentColor" opacity="0.85"/><line x1="172" y1="60" x2="212" y2="60" stroke="#0f1117" stroke-width="2.5"/><line x1="172" y1="70" x2="212" y2="70" stroke="#0f1117" stroke-width="2.5"/><line x1="172" y1="80" x2="196" y2="80" stroke="#0f1117" stroke-width="2.5"/><path d="M228 48 l4 9 10 1 -7 7 2 10 -9 -5 -9 5 2 -10 -7 -7 10 -1 Z" fill="currentColor"/>`},
+  {label:"ตรวจสอบ Peer Review", motif:`<path d="M158 56 h40 v26 h-28 l-10 9 v-9 h-2 Z" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M204 70 h34 v26 h-2 v9 l-10 -9 h-22 Z" fill="currentColor" opacity="0.85"/><path d="M210 84 l5 5 10 -11" fill="none" stroke="#0f1117" stroke-width="3" stroke-linecap="round"/>`}
+];
+
+// คำสั่งภาพถ่ายเสมือนจริง (ภาพวิว/ฉากจริง) เรียงตรงกับ CARDS
+const PHOTOS = [
+  "a glass of fresh cold water with droplets on a wooden table by a sunny window",
+  "a cozy dark bedroom at night with soft moonlight through the window, peaceful",
+  "a person jogging on a misty park path among green trees at sunrise",
+  "a rustic table full of colorful fresh fruits and vegetables, natural light",
+  "sugar cubes and sweet desserts on a table with soft morning light, healthy eating concept",
+  "a person stretching arms at a bright modern office desk by a large window",
+  "a calm misty lake at dawn with soft fog and gentle reflections",
+  "a doctor's stethoscope on a clean clinic desk with a heart health chart",
+  "a person resting eyes looking out a window at a lush green garden view",
+  "a healthy plate of eggs, grilled fish and nuts on a wooden table, food photography",
+  "an open gratitude journal beside a warm glowing lamp at night",
+  "a smartphone lying face down on a table in a calm sunny morning room",
+  "a person hugging themselves peacefully at a golden sunset on a quiet beach",
+  "an archery target on a stand in soft morning forest light",
+  "two cheerful friends laughing together outdoors in warm afternoon light",
+  "two hands gently giving a small wrapped gift, warm kindness moment",
+  "a person meditating in lotus pose by a calm sea at sunrise",
+  "a bright flag planted on a mountain summit above a sea of clouds",
+  "a dramatic sky with sun rays breaking through clouds after rain over hills",
+  "an artist painting a colorful canvas in a cozy sunlit studio",
+  "a glowing lightbulb on a desk beside an open notebook, idea concept, warm light",
+  "an open academic book with a magnifying glass resting on the pages",
+  "tall stacks of books in a warm cozy library with soft light",
+  "a brass balance scale on a wooden desk by a window, justice concept",
+  "handwritten outline notes on white paper with a fountain pen, top view",
+  "a laptop with a glowing shield hologram, data protection concept, blue light",
+  "a modern data center server room with soft blue ambient lighting",
+  "colorful statistics charts and bar graphs displayed on a computer screen",
+  "a neat printed research paper document on a tidy desk with a pen",
+  "two researchers discussing a printed paper together at a table, warm office"
+];
+
+const DATA = [
+  // ---------- HEALTH ----------
+  {c:"health",t:"ดื่มน้ำให้พอทุกวัน",b:"ร่างกายมีน้ำเป็นองค์ประกอบกว่า 60% การขาดน้ำเพียงเล็กน้อยทำให้อ่อนเพลีย สมาธิสั้น และปวดหัวได้",tip:"พกขวดน้ำติดตัว จิบทั้งวัน ตั้งเป้าราว 6–8 แก้ว และเพิ่มขึ้นเมื่อออกกำลังกายหรืออากาศร้อน"},
+  {c:"health",t:"นอนหลับอย่างมีคุณภาพ",b:"การนอน 7–9 ชั่วโมงช่วยซ่อมแซมร่างกาย จัดระเบียบความจำ และควบคุมฮอร์โมนความหิว",tip:"เข้านอน–ตื่นเวลาเดิมทุกวัน งดจอ 1 ชั่วโมงก่อนนอน และทำห้องให้มืดและเย็น"},
+  {c:"health",t:"ขยับร่างกาย 30 นาทีต่อวัน",b:"การเดินเร็วหรือออกกำลังเบา ๆ สม่ำเสมอ ลดความเสี่ยงโรคหัวใจ เบาหวาน และช่วยอารมณ์ดีขึ้น",tip:"แบ่งเป็นช่วงละ 10 นาทีได้ เช่น เดินหลังมื้ออาหาร ก็นับรวมได้เช่นกัน"},
+  {c:"health",t:"กินผักผลไม้ให้ครบสี",b:"สีของผักผลไม้สะท้อนสารต้านอนุมูลอิสระคนละชนิด การกินหลากสีจึงได้สารอาหารครบถ้วนกว่า",tip:"ตั้งเป้าให้ครึ่งจานของแต่ละมื้อเป็นผักหรือผลไม้ และสลับชนิดในแต่ละสัปดาห์"},
+  {c:"health",t:"ลดน้ำตาลที่ซ่อนอยู่",b:"น้ำตาลส่วนเกินเชื่อมโยงกับน้ำหนักขึ้น ฟันผุ และความเสี่ยงเบาหวาน โดยมักแฝงในเครื่องดื่มและของว่าง",tip:"อ่านฉลากโภชนาการ เลี่ยงน้ำหวาน และเลือกผลไม้สดแทนขนมเมื่ออยากของหวาน"},
+  {c:"health",t:"ยืดเหยียดลดออฟฟิศซินโดรม",b:"การนั่งนานทำให้กล้ามเนื้อคอ บ่า ไหล่ตึงและปวดเรื้อรัง การยืดเหยียดช่วยคลายและป้องกันได้",tip:"ตั้งเตือนทุก 1 ชั่วโมงให้ลุกยืดตัว หมุนคอ และยืดหลังสัก 1–2 นาที"},
+  {c:"health",t:"หายใจลึกเพื่อผ่อนคลายร่างกาย",b:"การหายใจช้าและลึกกระตุ้นระบบประสาทพาราซิมพาเทติก ช่วยลดความดันและอัตราการเต้นหัวใจ",tip:"ลองหายใจเข้า 4 วินาที กลั้น 4 วินาที ผ่อนออก 6 วินาที ทำซ้ำ 5 รอบเมื่อเครียด"},
+  {c:"health",t:"ตรวจสุขภาพประจำปี",b:"การตรวจสุขภาพช่วยจับสัญญาณโรคตั้งแต่ยังไม่มีอาการ ทำให้รักษาได้ทันและประหยัดกว่าในระยะยาว",tip:"จดค่าผลตรวจไว้เปรียบเทียบทุกปี และปรึกษาแพทย์เรื่องรายการตรวจที่เหมาะกับวัย"},
+  {c:"health",t:"พักสายตาด้วยกฎ 20-20-20",b:"การจ้องจอนานทำให้ตาล้าและแห้ง การพักสายตาเป็นระยะช่วยลดอาการและถนอมการมองเห็น",tip:"ทุก 20 นาที ให้มองวัตถุไกล 20 ฟุต (ราว 6 เมตร) นาน 20 วินาที"},
+  {c:"health",t:"โปรตีนเพียงพอเพื่อกล้ามเนื้อ",b:"โปรตีนช่วยซ่อมแซมและรักษามวลกล้ามเนื้อ โดยเฉพาะเมื่ออายุมากขึ้นที่กล้ามเนื้อมีแนวโน้มลดลง",tip:"กระจายโปรตีนทุกมื้อ เช่น ไข่ ถั่ว ปลา เต้าหู้ และอกไก่ แทนการกินรวดเดียวมื้อเดียว"},
+
+  // ---------- HAPPY ----------
+  {c:"happy",t:"ขอบคุณ 3 อย่างก่อนนอน",b:"การทบทวนสิ่งดี ๆ ในแต่ละวันฝึกสมองให้สังเกตด้านบวก ช่วยลดความเครียดและเพิ่มความพึงพอใจในชีวิต",tip:"เขียนสิ่งที่รู้สึกขอบคุณ 3 อย่างลงสมุดทุกคืน แม้เป็นเรื่องเล็ก ๆ ก็มีพลัง"},
+  {c:"happy",t:"ลดเวลาหน้าจอที่ไร้จุดหมาย",b:"การเลื่อนฟีดนาน ๆ มักทำให้เปรียบเทียบตัวเองกับคนอื่นและรู้สึกแย่ลงโดยไม่รู้ตัว",tip:"กำหนดช่วงเวลาเช็กโซเชียล และปิดการแจ้งเตือนที่ไม่จำเป็นเพื่อทวงเวลาคืน"},
+  {c:"happy",t:"ให้อภัยตัวเอง",b:"การโทษตัวเองซ้ำ ๆ บั่นทอนความมั่นใจ การยอมรับว่าทุกคนผิดพลาดได้ช่วยให้ก้าวต่อไปอย่างมีพลัง",tip:"ลองพูดกับตัวเองเหมือนพูดกับเพื่อนที่กำลังท้อ ด้วยความเข้าใจแทนการตำหนิ"},
+  {c:"happy",t:"โฟกัสสิ่งที่ควบคุมได้",b:"ความกังวลมักมาจากการพยายามคุมสิ่งที่อยู่นอกเหนือมือ การแยกแยะช่วยให้ใจสงบและลงมือทำได้ตรงจุด",tip:"เมื่อกังวล ถามตัวเองว่า 'เรื่องนี้เราทำอะไรได้บ้าง' แล้วลงมือกับส่วนนั้น"},
+  {c:"happy",t:"ลงทุนกับความสัมพันธ์ที่ดี",b:"งานวิจัยระยะยาวชี้ว่าความสัมพันธ์ที่อบอุ่นคือปัจจัยทำนายความสุขและสุขภาพที่ดีที่สุดในระยะยาว",tip:"ทักหาคนที่คุณห่วงใยอย่างสม่ำเสมอ แม้เพียงข้อความสั้น ๆ ก็รักษาสายสัมพันธ์ไว้ได้"},
+  {c:"happy",t:"ทำสิ่งเล็ก ๆ ให้คนอื่น",b:"การช่วยเหลือผู้อื่นกระตุ้นการหลั่งสารแห่งความสุข และทำให้รู้สึกว่าตัวเองมีคุณค่าและเชื่อมโยงกับผู้คน",tip:"เริ่มจากเรื่องง่าย เช่น ชมใครสักคนจริงใจ หรือช่วยงานเล็ก ๆ โดยไม่หวังผลตอบแทน"},
+  {c:"happy",t:"อยู่กับปัจจุบัน (Mindfulness)",b:"จิตที่ล่องลอยไปอดีตหรืออนาคตมักนำมาซึ่งความทุกข์ การฝึกอยู่กับปัจจุบันช่วยให้ใจนิ่งขึ้น",tip:"ลองกินข้าวหรือเดินโดยสังเกตรสชาติและสัมผัสจริง ๆ วันละครั้ง โดยไม่ทำอย่างอื่นไปด้วย"},
+  {c:"happy",t:"ตั้งเป้าหมายที่มีความหมาย",b:"เป้าหมายที่สอดคล้องกับคุณค่าในใจให้พลังมากกว่าเป้าที่ทำตามคนอื่น และทำให้ชีวิตมีทิศทาง",tip:"ถามตัวเองว่า 'อะไรสำคัญกับเราจริง ๆ' แล้วตั้งเป้าเล็ก ๆ ที่ขยับเข้าใกล้สิ่งนั้น"},
+  {c:"happy",t:"ยอมรับอารมณ์ลบอย่างอ่อนโยน",b:"การฝืนกดอารมณ์ลบมักทำให้มันรุนแรงขึ้น การยอมรับและเข้าใจมันต่างหากที่ช่วยให้ผ่านไปได้เร็วกว่า",tip:"เมื่อรู้สึกแย่ ลองเรียกชื่ออารมณ์นั้น เช่น 'นี่คือความผิดหวัง' แล้วให้พื้นที่กับมันสักครู่"},
+  {c:"happy",t:"หาเวลาให้งานอดิเรก",b:"กิจกรรมที่ทำแล้วเพลินจนลืมเวลา (flow) ช่วยเติมพลังใจและสมดุลกับความเครียดจากงานประจำ",tip:"กันเวลาในตารางให้สิ่งที่คุณรักอย่างน้อยสัปดาห์ละครั้ง เหมือนนัดสำคัญที่ยกเลิกไม่ได้"},
+
+  // ---------- RESEARCH ----------
+  {c:"research",t:"ตั้งคำถามวิจัยให้คมชัด",b:"คำถามวิจัยที่ดีคือจุดเริ่มของงานทั้งหมด ถ้าคำถามคลุมเครือ ผลและการวิเคราะห์ก็จะกระจัดกระจายตามไปด้วย",tip:"ใช้กรอบ PICO หรือถามให้เฉพาะเจาะจง: ใคร ทำอะไร เปรียบเทียบกับอะไร วัดผลอย่างไร"},
+  {c:"research",t:"อ่านบทคัดย่อก่อนเสมอ",b:"บทคัดย่อสรุปวัตถุประสงค์ วิธี และผลของงานในย่อหน้าเดียว ช่วยให้คัดกรองได้เร็วว่าควรอ่านฉบับเต็มไหม",tip:"อ่าน abstract และ conclusion ก่อน หากตรงประเด็นจึงค่อยลงลึกในส่วน method และ results"},
+  {c:"research",t:"จัดการรายการอ้างอิงด้วยโปรแกรม",b:"การพิมพ์อ้างอิงด้วยมือเสี่ยงผิดพลาดและกินเวลา โปรแกรมช่วยจัดรูปแบบและสลับสไตล์ได้ในคลิกเดียว",tip:"ลองใช้ Zotero หรือ Mendeley ฟรี เก็บงานที่อ่านไว้ตั้งแต่ต้น แล้วแทรกอ้างอิงอัตโนมัติ"},
+  {c:"research",t:"แยกข้อเท็จจริงจากความคิดเห็น",b:"งานวิชาการต้องอ้างหลักฐาน การแยกแยะว่าอะไรคือข้อมูลที่พิสูจน์ได้กับอะไรคือการตีความ ช่วยให้เขียนน่าเชื่อถือ",tip:"ทุกครั้งที่กล่าวอ้าง ถามว่า 'มีหลักฐานอะไรรองรับ' หากไม่มี ให้ระบุว่าเป็นการตั้งข้อสังเกต"},
+  {c:"research",t:"เขียนโครงร่างก่อนลงมือ",b:"การร่าง outline ช่วยจัดลำดับความคิดและเห็นภาพรวมก่อน ทำให้เขียนได้ลื่นและไม่หลงประเด็นกลางทาง",tip:"เริ่มจากหัวข้อหลักและประเด็นย่อยแบบ bullet แล้วค่อยขยายเป็นย่อหน้าทีหลัง"},
+  {c:"research",t:"หลีกเลี่ยงการคัดลอกผลงาน",b:"การคัดลอกโดยไม่อ้างอิงเป็นปัญหาจริยธรรมร้ายแรงในวงวิชาการ และทำลายความน่าเชื่อถือของผู้เขียน",tip:"สรุปด้วยคำของตัวเองเสมอ ใส่อ้างอิงทุกแนวคิดที่ไม่ใช่ของเรา และตรวจด้วยโปรแกรมก่อนส่ง"},
+  {c:"research",t:"เลือกแหล่งข้อมูลที่น่าเชื่อถือ",b:"ไม่ใช่ทุกแหล่งเท่ากัน บทความที่ผ่าน peer review และวารสารที่มีดัชนีน่าเชื่อถือกว่าบล็อกทั่วไป",tip:"ใช้ฐานข้อมูลเช่น PubMed, Scopus, Google Scholar และตรวจสอบว่าผู้เขียนและวารสารมีตัวตนจริง"},
+  {c:"research",t:"เข้าใจสถิติพื้นฐานที่ควรรู้",b:"ค่า p-value, ค่าเฉลี่ย และส่วนเบี่ยงเบนมาตรฐาน ช่วยตีความผลได้ถูก หากเข้าใจผิดก็สรุปผลคลาดเคลื่อนได้",tip:"จำไว้ว่า p-value บอกความน่าจะเป็นที่ผลเกิดจากความบังเอิญ ไม่ได้บอกว่าผลนั้นสำคัญในทางปฏิบัติ"},
+  {c:"research",t:"เขียนบทคัดย่อให้กระชับครบถ้วน",b:"บทคัดย่อคือหน้าตาแรกของงาน ผู้อ่านและกรรมการมักตัดสินใจจากตรงนี้ว่าจะอ่านต่อหรือไม่",tip:"ครอบคลุม 4 ส่วนในไม่กี่ประโยค: ที่มา/วัตถุประสงค์ วิธีการ ผลหลัก และข้อสรุป"},
+  {c:"research",t:"ตรวจสอบกระบวนการ Peer Review",b:"การผ่านการประเมินจากผู้เชี่ยวชาญช่วยกรองคุณภาพงาน การรู้ว่าวารสารทำ peer review จริงไหมจึงสำคัญ",tip:"ระวังวารสารหลอกลวง (predatory) ที่ตีพิมพ์เร็วผิดปกติและเก็บเงินสูง โดยตรวจรายชื่อจากแหล่งที่เชื่อถือได้"},
+  {c:"health",t:"กินใยอาหารให้ถึงวันละ 25–30 กรัม",b:"ใยอาหารช่วยให้ระบบขับถ่ายทำงานเป็นปกติ ควบคุมระดับน้ำตาลและไขมันในเลือด และเป็นอาหารให้จุลินทรีย์ดีในลำไส้",tip:"ค่อย ๆ เพิ่มจากธัญพืชไม่ขัดสี ถั่ว และผักผลไม้ทั้งเปลือก พร้อมดื่มน้ำมากขึ้นเพื่อลดอาการท้องอืด",date:"2026-06-15"},
+  {c:"happy",t:"ลดการเปรียบเทียบชีวิตตัวเองบนโซเชียล",b:"ฟีดโซเชียลมักโชว์เฉพาะช่วงเวลาที่ดีที่สุดของคนอื่น การนำมาเทียบกับชีวิตจริงของเราจึงบั่นทอนความสุขโดยไม่จำเป็น",tip:"เลิกติดตามบัญชีที่ทำให้รู้สึกแย่ แล้วหันมาจดสิ่งที่ตัวเองทำได้ดีขึ้นกว่าเมื่อวาน",date:"2026-06-15"},
+  {c:"research",t:"สรุปงานวิจัยด้วยตารางสังเคราะห์ (Synthesis Matrix)",b:"ตารางสังเคราะห์ช่วยจัดระเบียบว่าแต่ละงานพูดถึงประเด็นใด ทำให้เห็นความเหมือน ความต่าง และช่องว่างของงานวิจัยได้ชัดเจน",tip:"ตั้งแถวเป็นบทความแต่ละชิ้น คอลัมน์เป็นประเด็นหลัก แล้วเติมสาระสำคัญของแต่ละงานลงในช่อง",date:"2026-06-15"},
+  {c:"health",t:"ลดโซเดียมเพื่อหัวใจและไต",b:"องค์การอนามัยโลกแนะนำให้บริโภคโซเดียมไม่เกินวันละ 2,000 มิลลิกรัม หรือราวเกลือ 1 ช้อนชา เพราะการกินเค็มเกินไปสัมพันธ์กับความดันโลหิตสูง โรคหัวใจ และไตเสื่อมในระยะยาว",tip:"ชิมก่อนปรุงทุกครั้ง ลดน้ำปลาและซอสลงครึ่งหนึ่ง แล้วเพิ่มรสด้วยสมุนไพรหรือมะนาวแทน",date:"2026-06-16"},
+  {c:"happy",t:"เขียนบันทึกระบายความรู้สึก (Journaling)",b:"การเขียนระบายสิ่งที่คิดและรู้สึกลงกระดาษเพียงไม่กี่นาที ช่วยจัดระเบียบอารมณ์และลดความเครียดสะสม เพราะสมองได้แปลงความวุ่นวายข้างในให้เป็นถ้อยคำที่จับต้องได้",tip:"ก่อนนอนลองเขียนอิสระ 5 นาทีถึงสิ่งที่ค้างคาใจ โดยไม่ต้องห่วงไวยากรณ์หรือความสวยงาม",date:"2026-06-16"},
+  {c:"research",t:"ระบุช่องว่างงานวิจัย (Research Gap) ให้ชัด",b:"ช่องว่างงานวิจัยคือคำถามที่ยังไม่มีใครตอบหรือยังตอบได้ไม่ครบในงานก่อนหน้า การชี้จุดนี้ให้ชัดทำให้งานของเรามีเหตุผลรองรับและเพิ่มคุณค่าทางวิชาการ",tip:"อ่านหัวข้อ ‘ข้อเสนอแนะสำหรับงานวิจัยต่อไป’ ท้ายบทความล่าสุด 3–5 ฉบับ แล้วจดประเด็นที่ผู้เขียนบอกว่ายังขาด",date:"2026-06-16"},
+  {c:"health",t:"รับแดดอ่อนยามเช้าเพื่อวิตามินดีและนาฬิกาชีวภาพ",b:"แสงแดดยามเช้าช่วยให้ร่างกายสังเคราะห์วิตามินดีและช่วยตั้งนาฬิกาชีวภาพให้ตื่นตัวกลางวันและหลับลึกตอนกลางคืน การได้รับแสงธรรมชาติทุกเช้าจึงดีต่อทั้งกระดูกและคุณภาพการนอน",tip:"ออกไปรับแดดอ่อน ๆ ราว 10–15 นาทีภายในหนึ่งชั่วโมงแรกหลังตื่น เช่น เดินเล่นหรือจิบกาแฟริมหน้าต่าง และเลี่ยงแดดแรงช่วงเที่ยง",date:"2026-06-24"},
+  {c:"happy",t:"เติมพลังใจด้วยการใช้เวลากับธรรมชาติ",b:"งานวิจัยด้านจิตวิทยาพบว่าการอยู่ท่ามกลางต้นไม้และพื้นที่สีเขียวช่วยลดฮอร์โมนความเครียดและทำให้อารมณ์สงบขึ้นได้ภายในเวลาไม่นาน",tip:"จัดเวลาราว 20 นาทีต่อวันไปเดินในสวนหรือนั่งใต้ต้นไม้ วางมือถือไว้ก่อน แล้วสังเกตเสียง กลิ่น และสีรอบตัวอย่างตั้งใจ",date:"2026-06-24"},
+  {c:"research",t:"ค้นฐานข้อมูลด้วยตรรกะ Boolean ให้ตรงเป้า",b:"การใช้ตัวเชื่อม AND OR NOT ร่วมกับเครื่องหมายคำพูดและสัญลักษณ์ตัดคำ ช่วยกรองงานวิจัยที่ตรงประเด็นได้เร็วขึ้นและลดเวลาไล่อ่านเอกสารที่ไม่เกี่ยวข้อง",tip:"จัดคำค้นเป็นกลุ่มแนวคิด เชื่อมคำพ้องด้วย OR แล้วเชื่อมแต่ละแนวคิดด้วย AND เช่น (วัยรุ่น OR นักเรียน) AND (ความเครียด)",date:"2026-06-24"},
+  // === AUTO-INSERT-MARKER: เพิ่มบทความใหม่รายวันเหนือบรรทัด "];" นี้ (รูปแบบ: {c:"health|happy|research",t:"...",b:"...",tip:"...",date:"YYYY-MM-DD"}) ===
+];
+
+/* ---------- ตัวสุ่มแบบ seed ตามวันที่ (เปลี่ยนทุกวัน) ---------- */
+function todaySeed(){
+  const d = new Date();
+  return d.getFullYear()*10000 + (d.getMonth()+1)*100 + d.getDate();
+}
+function mulberry32(a){
+  return function(){
+    a|=0; a=a+0x6D2B79F5|0;
+    let t=Math.imul(a^a>>>15,1|a);
+    t=t+Math.imul(t^t>>>7,61|t)^t;
+    return ((t^t>>>14)>>>0)/4294967296;
+  };
+}
+function seededShuffle(arr,seed){
+  const rng=mulberry32(seed); const a=arr.slice();
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+  return a;
+}
+
+const seed = todaySeed();
+// แนบหมายเลขเดิมไว้ ก่อนสลับลำดับ เพื่อให้เลขการ์ดคงที่ต่อเรื่อง
+const INDEXED = DATA.map((d,i)=>({...d, no:i+1}));
+const ORDERED = seededShuffle(INDEXED, seed);
+
+/* ---------- แสดงวันที่ ---------- */
+const thMonths=["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."];
+const now=new Date();
+document.getElementById('today').textContent =
+  now.getDate()+" "+thMonths[now.getMonth()]+" "+(now.getFullYear()+543);
+
+/* ---------- ความรู้ประจำวัน ---------- */
+const featRng=mulberry32(seed^0x9e3779b9);
+const feat = ORDERED[Math.floor(featRng()*ORDERED.length)];
+document.getElementById('daily').innerHTML = `
+  <div class="dart">${art(feat.c, feat.no-1)}</div>
+  <div class="kicker">★ ความรู้ประจำวันนี้ · หมวด${LABEL[feat.c]}</div>
+  <h2>${feat.t}</h2>
+  <p>${feat.b}</p>
+  <div class="tip">💡 ลองทำดู: ${feat.tip}</div>
+`;
+
+/* ---------- เรนเดอร์การ์ด ---------- */
+const grid=document.getElementById('grid');
+function todayISO(){ const d=new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,'0')+"-"+String(d.getDate()).padStart(2,'0'); }
+const TODAY = todayISO();
+function render(cat){
+  grid.innerHTML="";
+  let list = cat==="all" ? ORDERED : ORDERED.filter(d=>d.c===cat);
+  // บทความใหม่ของวันนี้แสดงก่อน
+  list = list.slice().sort((a,b)=> (b.date===TODAY?1:0) - (a.date===TODAY?1:0));
+  list.forEach((d,i)=>{
+    const p=PAGES[d.c];
+    const isNew = d.date===TODAY;
+    const el=document.createElement('div');
+    el.className=`card ${d.c}`;
+    el.style.animationDelay=(i*0.03)+"s";
+    el.innerHTML=`
+      <div class="art">${art(d.c, d.no-1)}</div>
+      <div class="top">
+        <span class="chip ${d.c}">${LABEL[d.c]}</span>
+        <span class="num">${isNew?'<span class="newbadge">ใหม่วันนี้</span>':''}#${String(d.no).padStart(2,'0')}</span>
+      </div>
+      <h3>${d.t}</h3>
+      <div class="body">${d.b}</div>
+      <div class="tip">💡 ${d.tip}</div>
+      <a class="src" href="${p.url}" target="_blank" rel="noopener">ที่มา: ${p.name} ↗</a>
+    `;
+    grid.appendChild(el);
+  });
+}
+render("all");
+
+/* ---------- คำนวณสถิติอัตโนมัติจากจำนวนบทความ ---------- */
+(function(){
+  const c={health:0,happy:0,research:0};
+  DATA.forEach(d=>{ if(c[d.c]!==undefined) c[d.c]++; });
+  const set=(id,v)=>{const e=document.getElementById(id); if(e) e.textContent=v;};
+  set('nHealth',c.health); set('nHappy',c.happy); set('nResearch',c.research);
+  set('nTotal',DATA.length);
+})();
+
+/* ---------- แท็บกรอง ---------- */
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    render(t.dataset.cat);
+  });
+});
+</script>
+</body>
+</html>
